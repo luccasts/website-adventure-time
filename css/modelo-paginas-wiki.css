@@ -1,0 +1,226 @@
+#header-navegacao-lugares {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-lugares {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#background-nav-header {
+  position: absolute;
+  background: url("../images/pag-lugares/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(40%) blur(4px);
+  z-index: -1;
+  width: 100dvw;
+  height: 500px;
+  background-position: center;
+}
+.modelo-header-row #div-container-header {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.072);
+  max-width: 1280px;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  border-radius: 30px;
+  gap: calc(32px + 1vh);
+}
+.modelo-header-row #div-titulo-principal-header {
+  display: flex;
+  justify-content: center;
+}
+.modelo-titulo #titulo-principal-header {
+  cursor: pointer;
+  width: fit-content;
+  background-image: linear-gradient(
+    0deg,
+    var(--color-07) 50%,
+    var(--color-10) 50%
+  );
+  background-size: 100% 200%;
+  background-position: top;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.14);
+}
+.titulo-linear-gradient:hover {
+  background-position: bottom;
+}
+
+.modelo-titulo #titulo-principal-header:hover {
+  background-position: bottom;
+}
+
+.modelo-titulo .titulo-principal {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+.modelo-titulo .titulo-secundario {
+  font-size: 2rem;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.14);
+}
+
+.modelo-header-row #header-navegacao-lugares .nav-lugares {
+  width: 100%;
+}
+
+.modelo-header-row #header-navegacao-lugares .nav-lugares ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.modelo-header-row #header-navegacao-lugares #div-container-header .lugares-a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+.modelo-header-row
+  #header-navegacao-lugares
+  #div-container-header
+  .lugares-a:hover {
+  transform: scale(1.1);
+}
+.modelo-header-row #header-navegacao-lugares .lugares-a h2 {
+  transition: all 0.3s;
+}
+.modelo-header-row #header-navegacao-lugares .lugares-a h2:hover {
+  transform: scale(1.1);
+}
+
+.modelo-header-row #header-navegacao-lugares .img-lugares {
+  border-radius: 90%;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all 0.8s ease;
+  position: relative;
+  z-index: 10;
+}
+.modelo-header-row #header-navegacao-lugares .img-lugares:hover {
+  transform: scale(1.1);
+}
+.modelo-header-row .display-flex-header-h2 {
+  display: flex;
+  justify-content: center;
+}
+
+/*Parte do MAIN*/
+#main {
+  display: flex;
+  justify-content: center;
+  background-image: url("../images/pag-lugares/background.png"); /*Background text*/
+  background-position: top;
+  background-repeat: no-repeat;
+  min-width: 100dvw;
+  min-height: 100dvh;
+  position: absolute;
+
+  background-size: cover;
+}
+#background-branco {
+  margin-top: 1rem;
+  background-color: var(--color-10);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: calc(16px + 1vh);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#section-text {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: calc(16px + 1vh);
+}
+
+#div-image-principal {
+  display: flex;
+  gap: calc(16px + 1vh);
+}
+#main .text-longo {
+  font-family: "Source Sans 3", "Rubik", helvetica, arial, sans-serif;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+#main #img-float {
+  max-width: 500px;
+  max-height: 300px;
+  float: right;
+  border: 1px solid;
+}
+#fotos #galeria {
+  float: right;
+}
+#main .titulo-linear-gradient {
+  cursor: auto;
+  background-image: linear-gradient(
+    0deg,
+    var(--color-07) 50%,
+    var(--color-07) 50%
+  );
+}
+#section-personagens {
+  display: flex;
+  flex-direction: column;
+  gap: calc(16px + 1vh);
+}
+#titulo-personagem {
+  font-size: 3rem !important;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.14) !important;
+}
+#div-flex-personagens {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.personagens-flex-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.box-img-personagens {
+  max-width: 200px;
+  max-height: 150px;
+
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+#div-flex-personagens img {
+  max-width: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20%;
+  transition: all 0.8s ease;
+  position: relative;
+}
+
+.nome-personagens {
+  cursor: pointer !important;
+  font-size: 2rem !important;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.14) !important;
+}
+
+#div-flex-personagens img:hover {
+  transform: scale(1.1);
+}
+
+.nome-personagens:hover {
+  transform: scale(1.1);
+}

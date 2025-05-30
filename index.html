@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hora de Aventura</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="pag-index">
+    <main>
+      <div
+        id="controller-button"
+        class="display-none sweezy-custom-cursor-hover"
+      >
+        <button id="mute">🔇</button>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+      </div>
+      <div>
+        <video id="meuVideo" muted autoplay loop width="100%">
+          <source
+            src="/videos/pag-index/Adventure_Time-Opening.mp4"
+            type="video/webm"
+          />
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+      <section class="display-none sweezy-custom-cursor-default-hover">
+        <div class="sweezy-custom-cursor-default-hover" id="div-button-entrar">
+          <button id="play">COMEÇAR</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
