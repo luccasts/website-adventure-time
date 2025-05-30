@@ -1,0 +1,11 @@
+/* #pag-finn .nav-lugares {
+  display: none;
+} */
+#pag-finn.modelo-header-row #header-navegacao-lugares .img-lugares {
+  box-shadow: none;
+  width: 100px;
+}
+
+#pag-finn.modelo-header-row #header-navegacao-lugares .img-lugares:hover {
+  transform: scale(1.05);
+}
