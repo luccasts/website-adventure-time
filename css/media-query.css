@@ -1,0 +1,21 @@
+@media screen and (max-width:1050px) {
+  #text-historia{
+    width: 400px;
+  }
+   .titulo-principal{
+   font-size: 2rem !important;
+   color: black;
+  }
+  .div-img-historia{
+  /* background-color: #fbfbfb; */
+    flex-direction: column;
+
+      margin: 1rem;
+}
+}
+@media screen and (max-width:768px) {
+   #text-historia{
+    width: 400px;
+  }
+ 
+}

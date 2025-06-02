@@ -53,7 +53,7 @@
   transition: background-position 0.4s;
   text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.14);
 }
-.titulo-linear-gradient:hover {
+.titulo-linear-gradiente:hover {
   background-position: bottom;
 }
 
@@ -130,7 +130,7 @@
 
   background-size: cover;
 }
-#background-branco {
+.background-branco {
   margin-top: 1rem;
   background-color: var(--color-10);
   border-radius: 1rem;
@@ -163,13 +163,13 @@
 #fotos #galeria {
   float: left;
 }
-#main .titulo-linear-gradient {
+#main .titulo-linear-gradiente {
   cursor: auto;
   background-image: linear-gradient(
     0deg,
     var(--color-07) 50%,
     var(--color-07) 50%
-  );
+  ) !important;
 }
 
 #section-modelo3d iframe {

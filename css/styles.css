@@ -3,6 +3,7 @@
 @import url("./reino-doce.css");
 @import url("./lugares.css");
 @import url("./personagens-paginas-wiki.css");
+@import url("./media-query.css");
 @font-face {
   font-family: "Pieces of Eight";
   src: url("../fonts/Pieces_of_Eight.ttf");
@@ -28,7 +29,18 @@
   --color-09: #cba4ff;
   --color-10: #fff;
   --color-11: #fa8cdd;
+  --color-12: #eeeeee;
+  --color-13: #141414;
+  --color-14: #00aeefba;
+  --color-15: #00aeef30;
+  --color-16: #071115ba;
+  --max-width: 1280px;
+  --font-size-p: 1.3rem;
 }
+html {
+  scroll-behavior: smooth;
+}
+/*Modificações Globais de tags*/
 button {
   background-color: transparent;
   border: none;
@@ -36,81 +48,119 @@ button {
 a {
   text-decoration: none;
 }
-.container {
-  max-width: 1280px;
+p {
+  font-family: "Source Sans 3", "Rubik", helvetica, arial, sans-serif;
+  text-align: justify;
 }
+ul {
+  list-style: none;
+}
+footer#rodape span,
+footer#rodape a {
+  font-family: "Source Sans 3", "Rubik", helvetica, arial, sans-serif;
+}
+/*Classes Globais*/
 .row {
-  max-width: 1280px;
+  max-width: var(--max-width);
+}
+.ampliar {
+  animation: tirarZoom 0.8s ease forwards;
 }
 
-#pag-index {
-  height: 100dvh;
-  overflow-y: hidden;
+.titulo-linear-gradiente {
+  cursor: pointer;
+  width: fit-content;
+  background-image: linear-gradient(
+    0deg,
+    var(--color-12) 50%,
+    var(--color-10) 50%
+  );
+  background-size: 100% 200%;
+  background-position: top;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.14);
 }
 
-#pag-index video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  min-width: 100%;
-  min-height: 100%;
-
-  width: auto;
-  height: auto;
-
-  z-index: -1;
-  object-fit: cover;
-
-  background-color: black;
-  filter: brightness(30%);
+.titulo-linear-gradiente:hover {
+  background-position: bottom;
 }
-
-#controller-button {
-  display: flex;
+.link-header-linear-gradiente {
+  font-size: 1.4rem;
+  background-image: linear-gradient(
+    0deg,
+    var(--color-02) 50%,
+    var(--color-10) 50%
+  );
+  text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.14);
 }
-#controller-button button {
-  font-size: 20px;
+.titulo-principal {
+  font-size: 5rem;
+  text-transform: uppercase;
 }
-#volume {
-  display: none;
+.titulo-secundario {
+  font-size: 2rem;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.14);
 }
-
-#controller-button:hover #volume {
+/*Tratamento do Header*/
+#header-index {
   display: block;
-}
-#pag-index main {
+  margin: auto auto;
+  background-color: var(--color-16);
   width: 100%;
-  height: 100%;
+  position: fixed;
+
+  z-index: 10;
 }
-#pag-index main section {
+#header-index #div-nav-container {
   width: 100%;
-  height: 100%;
+  margin: auto auto;
+}
+#nav-principal {
+  width: 100%;
+
+  z-index: 10;
+}
+#nav-principal {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  list-style: none;
+  justify-content: space-between;
   align-items: center;
 }
+#nav-principal ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  gap: 32px;
+}
 
-#div-button-entrar button {
-  font-size: 3rem;
-  color: var(--color-01);
-  border: 2px solid var(--color-01);
-  border-radius: 2rem 2rem 0px 0px;
-  padding: 20px 35px;
+#nav-principal ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.preencher-link a {
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  padding: 3px 3px;
   position: relative;
   overflow: hidden;
   z-index: 1;
   cursor: pointer;
 }
 
-#div-button-entrar button::before {
+.preencher-link a::before {
   content: "";
   position: absolute;
-  background-color: var(--color-01);
-  height: 200px;
-  width: 350px;
+  background-color: var(--color-15);
+  height: 300px;
+  width: 300px;
   top: 100%;
   left: 100%;
   transition: all 0.7s;
@@ -118,11 +168,172 @@ a {
   z-index: -3;
 }
 
-#div-button-entrar button:hover::before {
-  top: -30px;
+.preencher-link a:hover::before {
+  top: -50px;
   left: -30px;
 }
+/*Começo a página*/
+#pag-index video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  min-width: 100dvw;
+  min-height: 100dvh;
+  filter: brightness(10%);
+}
 
-#div-button-entrar button:hover {
+/*Controle */
+#controle-butao {
+  position: relative;
+  display: flex;
+}
+
+#controle-butao button {
+  font-size: 20px;
+}
+#volume {
+  display: none;
+}
+
+#controle-butao:hover #volume {
+  display: block;
+  position: absolute;
+  margin: auto;
+}
+
+/*Inicio das páginas*/
+#pag-index {
+  overflow-x: hidden;
+}
+#pag-index main {
+  min-width: 100%;
+  min-height: 100%;
+}
+#pag-index main section {
+  min-width: 100dvw;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sobrepor-video {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  width: 100%;
+  min-height: 100dvh;
+  justify-content: center;
+  align-items: center;
+}
+#background-sobrepor-video {
+  background-color: var(--color-16);
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#background-section-historia {
+  position: absolute;
+  background-image: url("../images/pag-index/historia-background.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(20%) blur(4px);
+  z-index: -1;
+  width: 100dvw;
+  height: 100%;
+  background-position: center;
+}
+.div-img-historia {
+  background-color: var(--color-16);
+  max-height: 1000px;
+
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  box-shadow: rgba(100, 100, 111, 0.033) 0px 7px 29px 0px;
   color: var(--color-10);
+  padding: 1rem;
+}
+.div-img-historia img {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  color: var(--color-07);
+  max-width: 500px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+#text-historia {
+  max-width: 500px;
+  font-size: var(--font-size-p);
+}
+#background-section-personages {
+  background-image: url("/images/pag-index/background-personagens.jpg");
+  background-size: cover;
+  filter: brightness(40%) blur(4px);
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+#section-personagens #container-section-personagens {
+  max-height: 700px;
+
+  background-color: var(--color-16);
+  border-radius: 0.8rem 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#container-section-personagens {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+#h1-personagens {
+  margin: auto;
+}
+#ul-personagens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 5rem;
+}
+#ul-personagens li {
+  text-align: center;
+}
+footer#rodape a {
+  color: var(--color-02);
+}
+
+footer#rodape a:hover {
+  text-decoration: underline;
+}
+footer#rodape {
+  background-color: #0e1a1f;
+  color: var(--color-10);
+  text-align: center;
+  padding: 40px;
+  font-size: 0.8rem;
+}
+
+@keyframes tirarZoom {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

@@ -1,4 +1,4 @@
-#pag-lugares #main-lugares {
+#section-lugares #main-lugares {
   height: 100dvh;
   width: 100dvw;
   display: flex;
@@ -31,72 +31,43 @@
   display: flex;
   justify-content: center;
 }
-#titulo-principal-header {
-  cursor: default;
-  width: fit-content;
-  background-image: linear-gradient(
-    0deg,
-    var(--color-07) 50%,
-    var(--color-10) 50%
-  );
-  background-size: 100% 200%;
-  background-position: top;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-position 0.4s;
-  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.14);
-}
 
-#titulo-principal-header:hover {
-  background-position: bottom;
-}
-
-.titulo-principal {
-  font-size: 5rem;
-  text-transform: uppercase;
-}
-.titulo-secundario {
-  font-size: 2rem;
-  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.14);
-}
-
-#pag-lugares header nav {
+#section-lugares header nav {
   width: 100%;
 }
 
-#pag-lugares nav ul {
+#section-lugares nav ul {
   display: flex;
   justify-content: space-around;
   align-items: start;
   list-style: none;
   flex-wrap: wrap;
 }
-#pag-lugares #div-container-header .lugares-a {
+#section-lugaress #div-container-header .lugares-a {
   display: block;
   width: 100%;
   height: 100%;
   transition: transform 0.3s;
 }
-#pag-lugares #div-container-header .lugares-a:hover {
+#section-lugares #div-container-header .lugares-a:hover {
   transform: scale(1.1);
 }
-#pag-lugares .lugares-a h2 {
+#section-lugares .lugares-a h2 {
   transition: all 0.3s;
 }
-#pag-lugares .lugares-a h2:hover {
+#section-lugares .lugares-a h2:hover {
   transform: scale(1.1);
 }
-#pag-lugares .img-lugares {
+#section-lugares .img-lugares {
   border-radius: 10%;
   max-width: 300px;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   transition: all 0.8s ease;
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
-#pag-lugares .img-lugares:hover {
+#section-lugares .img-lugares:hover {
   transform: scale(1.1);
 }
 .display-flex-header-h2 {
@@ -104,33 +75,12 @@
   justify-content: center;
 }
 
-.titulo-linear-gradient {
-  cursor: pointer;
-  width: fit-content;
-  background-image: linear-gradient(
-    0deg,
-    var(--color-07) 50%,
-    var(--color-10) 50%
-  );
-  background-size: 100% 200%;
-  background-position: top;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-position 0.4s;
-  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.14);
-}
-
-.titulo-linear-gradient:hover {
-  background-position: bottom;
-}
-
 .titulo-casa-arvore {
   background-image: linear-gradient(
     0deg,
     var(--color-07) 50%,
     var(--color-10) 50%
-  );
+  ) !important;
 }
 
 .titulo-reino-doce {
@@ -138,7 +88,7 @@
     0deg,
     var(--color-04) 50%,
     var(--color-10) 50%
-  );
+  ) !important;
 }
 
 .titulo-reino-gelado {
@@ -146,7 +96,7 @@
     0deg,
     var(--color-02) 50%,
     var(--color-10) 50%
-  );
+  ) !important;
 }
 
 .img-transicao {
