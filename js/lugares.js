@@ -5,7 +5,7 @@ links.forEach((link) => {
     e.preventDefault();
 
     const destino = link.getAttribute("href");
-
+    console.log(destino);
     // Aqui define qual imagem usar na transição dependendo do link
     let imgSrc = "";
     if (destino.includes("reino-doce")) {
@@ -29,7 +29,7 @@ links.forEach((link) => {
     img.classList.add("expandindo");
 
     setTimeout(() => {
-      window.location.href = destino;
+      window.location.href += destino;
     }, 1000); // Tempo igual ao da transição no CSS
   });
 });
