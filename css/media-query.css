@@ -1,21 +1,75 @@
-@media screen and (max-width:1050px) {
-  #text-historia{
+@media screen and (max-width: 1050px) {
+  #text-historia {
     width: 400px;
   }
-   .titulo-principal{
-   font-size: 2rem !important;
-   color: black;
+  .titulo-principal {
+    font-size: 2rem !important;
+    color: black;
   }
-  .div-img-historia{
-  /* background-color: #fbfbfb; */
+  .div-img-historia {
+    /* background-color: #fbfbfb; */
     flex-direction: column;
 
-      margin: 1rem;
-}
-}
-@media screen and (max-width:768px) {
-   #text-historia{
-    width: 400px;
+    margin: 1rem;
   }
- 
+}
+@media screen and (max-width: 768px) {
+  #text-historia {
+    max-width: 400px;
+    width: 100%;
+  }
+  #nav-principal ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mostrar botão hamburguer */
+  .menu-toggle {
+    display: block;
+  }
+  #nav-principal {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  /* Nav em modo mobile - esconde inicialmente */
+  #nav-principal ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-16);
+    flex-direction: column;
+    gap: 16px;
+    padding: 1rem 0;
+    z-index: 1;
+  }
+
+  #nav-principal #controle-botao {
+    display: none;
+    position: relative;
+  }
+
+  /* Nav quando ativo */
+  #nav-principal ul.active {
+    display: flex;
+  }
+  #nav-principal #controle-botao.active {
+    display: flex;
+    margin: auto;
+  }
+
+  /* Alinhar nav e elementos no mobile */
+  #nav-principal {
+    justify-content: space-between;
+  }
+  #nav-principal ul li {
+    width: 100%;
+    height: 100%;
+  }
+  #nav-principal ul a {
+    width: 100%;
+    height: 100%;
+  }
 }

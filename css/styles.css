@@ -3,7 +3,7 @@
 @import url("./reino-doce.css");
 @import url("./lugares.css");
 @import url("./personagens-paginas-wiki.css");
-@import url("./media-query.css");
+
 @font-face {
   font-family: "Pieces of Eight";
   src: url("../fonts/Pieces_of_Eight.ttf");
@@ -172,6 +172,15 @@ footer#rodape a {
   top: -50px;
   left: -30px;
 }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+}
+
 /*Começo a página*/
 #pag-index video {
   position: absolute;
@@ -186,21 +195,30 @@ footer#rodape a {
 }
 
 /*Controle */
-#controle-butao {
+#controle-botao {
   position: relative;
   display: flex;
 }
 
-#controle-butao button {
+#controle-botao button {
   font-size: 20px;
+}
+#mute > i {
+  color: white;
 }
 #volume {
   display: none;
 }
-
-#controle-butao:hover #volume {
-  display: block;
-  position: absolute;
+#controle-botao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #bbbbbb01;
+  width: 150px;
+}
+#controle-botao:hover #volume {
+  display: inline-block;
+  position: relative;
   margin: auto;
 }
 
@@ -261,6 +279,7 @@ footer#rodape a {
   box-shadow: rgba(100, 100, 111, 0.033) 0px 7px 29px 0px;
   color: var(--color-10);
   padding: 1rem;
+  width: 100%;
 }
 .div-img-historia img {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -276,7 +295,7 @@ footer#rodape a {
   font-size: var(--font-size-p);
 }
 #background-section-personages {
-  background-image: url("/images/pag-index/background-personagens.jpg");
+  background-image: url("../images/pag-index/background-personagens.jpg");
   background-size: cover;
   filter: brightness(40%) blur(4px);
   width: 100dvw;

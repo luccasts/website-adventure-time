@@ -10,11 +10,15 @@
       src="https://kit.fontawesome.com/93f012ef48.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="css/media-query.css" />
   </head>
 
   <body id="pag-index">
     <header id="header-index">
       <div id="div-nav-container" class="row">
+        <button id="menu-toggle" class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
         <nav id="nav-principal" class="row">
           <ul>
             <li class="preencher-link">
@@ -38,21 +42,25 @@
                 >Personagens</a
               >
             </li>
+            <li>
+              <div
+                id="controle-botao"
+                class="display-none sweezy-custom-cursor-hover"
+              >
+                <button id="mute">
+                  <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+                <input
+                  type="range"
+                  id="volume"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="1"
+                />
+              </div>
+            </li>
           </ul>
-          <div
-            id="controle-butao"
-            class="display-none sweezy-custom-cursor-hover"
-          >
-            <button id="mute"><i class="fa-solid fa-volume-xmark"></i></button>
-            <input
-              type="range"
-              id="volume"
-              min="0"
-              max="1"
-              step="0.01"
-              value="1"
-            />
-          </div>
         </nav>
       </div>
     </header>
@@ -61,7 +69,7 @@
         <div>
           <video id="meuVideo" muted autoplay loop width="100%">
             <source
-              src="videos/pag-index/adventure_time_background.mp4"
+              src="videos/pag-index/adventure-time-opening.mp4"
               type="video/mp4"
             />
             Seu navegador não suporta vídeo.

@@ -46,7 +46,6 @@ links.forEach((link) => {
     img.classList.add("expandindo");
 
     setTimeout(() => {
-      console.log(destino);
       window.location.href = destino;
     }, 1000); // Tempo igual ao da transição no CSS
   });
