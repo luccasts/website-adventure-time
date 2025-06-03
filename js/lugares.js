@@ -1,5 +1,10 @@
 const links = document.querySelectorAll(".link-transicao");
-
+window.onload = () => {
+  const transicao = document.querySelector(".img-transicao");
+  if (transicao) {
+    transicao.remove();
+  }
+};
 links.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
