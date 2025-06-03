@@ -9,11 +9,11 @@ links.forEach((link) => {
     // Aqui define qual imagem usar na transição dependendo do link
     let imgSrc = "";
     if (destino.includes("reino-doce")) {
-      imgSrc = "../../images/pag-lugares/candy-kingdom.jpg";
+      imgSrc = "images/pag-lugares/candy-kingdom.jpg";
     } else if (destino.includes("casa-arvore")) {
-      imgSrc = "../../images/pag-lugares/the-tree-house.png";
+      imgSrc = "images/pag-lugares/the-tree-house.png";
     } else if (destino.includes("reino-gelado")) {
-      imgSrc = "../../images/pag-lugares/ice-kingdom.webp";
+      imgSrc = "images/pag-lugares/ice-kingdom.webp";
     }
 
     const img = document.createElement("img");
