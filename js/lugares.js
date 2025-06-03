@@ -5,6 +5,15 @@ window.onload = () => {
     transicao.remove();
   }
 };
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    const transicao = document.querySelector(".img-transicao");
+    if (transicao) {
+      transicao.remove();
+    }
+  }
+});
 links.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
