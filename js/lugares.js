@@ -5,15 +5,18 @@ links.forEach((link) => {
     e.preventDefault();
 
     const destino = link.getAttribute("href");
-    console.log(destino);
-    // Aqui define qual imagem usar na transição dependendo do link
+    const estaEmPages = window.location.pathname.includes("/pages/");
+
+    const prefixoCaminho = estaEmPages ? "../../" : "";
+
     let imgSrc = "";
+
     if (destino.includes("reino-doce")) {
-      imgSrc = "images/pag-lugares/candy-kingdom.jpg";
+      imgSrc = `${prefixoCaminho}images/pag-lugares/candy-kingdom.jpg`;
     } else if (destino.includes("casa-arvore")) {
-      imgSrc = "images/pag-lugares/the-tree-house.png";
+      imgSrc = `${prefixoCaminho}images/pag-lugares/the-tree-house.png`;
     } else if (destino.includes("reino-gelado")) {
-      imgSrc = "images/pag-lugares/ice-kingdom.webp";
+      imgSrc = `${prefixoCaminho}images/pag-lugares/ice-kingdom.webp`;
     }
 
     const img = document.createElement("img");
@@ -29,7 +32,8 @@ links.forEach((link) => {
     img.classList.add("expandindo");
 
     setTimeout(() => {
-      window.location.href += destino;
+      console.log(destino);
+      window.location.href = destino;
     }, 1000); // Tempo igual ao da transição no CSS
   });
 });
